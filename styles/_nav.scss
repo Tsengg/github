@@ -1,0 +1,25 @@
+nav{
+    background-color: #312f2f;
+
+    ul{
+        display: flex;
+        padding-left: 1rem;
+
+        li{
+            padding: 0.5rem 0.75rem;
+            a{
+                color: #c4c4c4;
+                text-decoration: none;
+                font-size: 1.3em;
+                :hover{
+                    color: yellow;
+                }
+                // 因為是父層選擇器，要繼承a的話需要寫在a裡面，而不是和a同一層
+
+                i{
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}

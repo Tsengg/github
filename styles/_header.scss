@@ -1,0 +1,15 @@
+header{
+    background-color: $themeColor;
+    width: 100%;
+    padding: 1rem;
+
+    h1{
+        font-size: $fontSize;
+        margin-bottom: 10px;
+
+        i{
+            font-size: 1.2em;
+        }
+    }
+}
+// 減少重複出現的標籤，後續程式維護上比較容易，透過live sass compiler這個延伸模組翻譯回css

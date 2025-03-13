@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+$themeColor: lightpink;
+$fontSize: 20px;
+// 定義變數要放在最前面(可以在CSS reset/normalize後)
+// 駝峰式命名：第2個單字起首字大寫
+// 共用的變數不能移到個別檔案
+
+@import "./header";
+
+@import "./nav";
+
+// @import插入在原本的位置
+// 後面不是接url()，是空格雙引號，中間輸入./，檔名用選的，會自動省略副檔名和前面的_
+// 新增檔案時命名前面需要加_，才不會被翻譯成css
+// 共用的變數不能移到個別檔案
+
+@mixin tryMixIn($flexDiretion: row, $justifyContent: space-evenly){
+    display: flex;
+    flex-direction: $flexDiretion;
+    justify-content: $justifyContent;
+    align-items: center;
+}
+
+section.container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    section.left{
+        padding: 1rem;
+        flex-grow: 4;
+        flex-shrink: 1;
+        flex-basis: 350px;
+
+        h1{
+            font-size: 30px;
+            margin-top: 10px;
+            font-weight: bolder;
+        }
+
+        h2{
+            margin: 30px 0 0 20px;
+            font-weight: bolder;
+        }
+
+        p{
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        #curve_chart{
+            width: 70vw;
+            height: 50vh;
+        }
+
+        ol{
+            padding: 0 0 0 18px;
+        }
+
+        ol li{
+            list-style: decimal;
+        }
+
+        ul{
+            padding: 5px 0 0 20px;
+        }
+
+        ul li{
+            list-style: disc;
+            font-weight: 200;
+        }
+
+        img{
+            width: 500px;
+        }
+    }
+
+    section.right{
+        padding: 1rem;
+        flex: 1 1 350px;
+
+        h5{
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        iframe{
+            border: 1px solid red;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+
+            $width:600px;
+
+            height: (400px / 2);
+            width: $width / 2;
+            padding: 2px + 5;
+            margin: 3px / (1 + 2);
+            // 先乘除後加減，括號內優先
+            // 除號要加上括號才能運算
+            // 後面數字不需要單位，特別是除號時(不然單位會被約分約掉)
+
+            ul.links1{
+                @include tryMixIn(row-reverse, space-around);
+
+            }
+
+            ul.links2{
+                @include tryMixIn(row, space-between);
+                // 即使跟預設值相同，仍然不能省略，除非是最末項，否則會造成順序錯亂
+            }
+        }
+
+        ul.book{
+            background-color: rgb(209, 145, 62);
+            margin: 10px 0 0 10px;
+            padding-left: 40px;
+            width: 900px;
+
+            li{
+                font-weight: 400;
+                // color: aliceblue;
+                line-height: 3em;
+                a{
+                    color: aliceblue;
+                    text-decoration: none;
+                    :hover{
+                        color: rgb(82, 83, 6);
+                    }
+                }
+            }
+        }
+    }
+}

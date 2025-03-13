@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>關於作者 | 台灣經濟發展歷史</title>
+    <link rel="stylesheet" href="styles/style1128.css">
+    <link rel="stylesheet" href="./twicon/twicon.css">
+
+    <link rel="shortcut icon" href="./images/taiwanIcon.png">
+    <link rel="bookmark" href="./images/taiwanIcon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales'],
+                ['1960', 34394],
+                ['1965', 114762],
+                ['1970', 231397],
+                ['1975', 601778],
+                ['1980', 1522459],
+                ['1985', 2533056],
+                ['1990', 4474288],
+                ['1995', 7391062],
+                ['2000', 10328549],
+                ['2005', 12036675],
+                ['2010', 14060345]
+            ]);
+
+            var options = {
+                title: '台灣過去50年GDP變化圖表',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1><i class="twicon-main-island"></i> 台灣經濟發展歷史</h1>
+            <p>過去70年台灣經濟發展的歷史以及相關政策</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="./index.html" target="_top"><i class="twicon-main-island"></i> 首頁</a></li>
+                <li><a href="./argri.html" target="_top"><i class="twicon-couplets"></i> 農業改革</a></li>
+                <li><a href="./indu.html" target="_top"><i class="twicon-electric-pot"></i> 工業改革</a></li>
+                <li><a href="./eco.html" target="_top"><i class="twicon-high-speed-rail"></i> 經濟起飛</a></li>
+                <li><a href="./author.html" target="_top"><i class="twicon-red-man"></i> 關於作者</a></li>
+            </ul>
+        </nav>
+
+        <section class="container">
+            <section class="left">
+                <h1>作者簡介</h1>
+                <hr>
+                <p style="line-height: 2.5em;">
+                    歷史學博士，現任國際歷史研究中心主任，專長於古代文明與中世紀歐洲史。自幼對歷史充滿熱情，研究涵蓋範圍廣泛，從失落的文明到重大歷史事件的重新詮釋，無不深入探討。<mark>他的著作多次獲得學術界高度評價，並被譽為當代最具影響力的歷史學家之一。</mark>代表作《帝國的黃昏：羅馬衰退的秘密》不僅在學術界掀起討論熱潮，還成為大眾讀者了解古代史的最佳入門書籍。除學術研究外，他也經常受邀參與國際會議與公開講座，致力於普及歷史知識及跨文化交流。他的學術方法兼具傳統與創新，並強調歷史研究的跨學科融合，對現代史學的發展起到了積極推動作用。<u>工作理念是：歷史不僅是過去的故事，它是理解當下、預測未來的鑰匙。</u>
+                </p>
+            </section>
+
+                <section class="right">
+                    <h1>著作簡介
+                    </h1>
+                    
+                    <ul class="book">
+                        <li>
+                            <a href="#">
+                                《帝國的黃昏：羅馬衰退的秘密》
+                                探討羅馬帝國衰落背後的內部矛盾、外部威脅與政治陰謀。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《遠古的陰影：文明誕生前的秘辛》
+                                透過考古學與歷史學的視角，揭示人類文明的起源與失落的古代文化。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《中世紀之劍：戰爭與權力的交織》
+                                深入分析中世紀歐洲的重大戰爭與騎士文化，揭示貴族與平民間的權力鬥爭。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《黃金時代的迷失：16世紀西班牙帝國的衰退》
+                                探討西班牙帝國如何從全球霸權走向衰退的過程，揭示內部腐敗與外部挑戰。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《光與影的邊界：大英帝國的崛起與覆滅》
+                                揭示大英帝國如何從一個海上強國成為世界殖民帝國，並最終走向解體。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《龍與鷹：東西方對抗的三百年》
+                                聚焦於中國與歐洲、阿拉伯世界之間的貿易、衝突與文化交流。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《明清之間：中國王朝的繼承與衝突》
+                                探討明朝與清朝的交替，從政治、文化及社會的角度分析兩個王朝的變遷。
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                《革命的火種：法國大革命背後的未解之謎》
+                                揭示法國大革命的深層原因，探索革命領袖的理想與革命背後的陰謀。
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+    </main>
+</body>
+
+</html>
